@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-const rootReducer = combineReducers({
+import wallPostsReducer from './wallPostsReducer';
 
+const rootReducer = combineReducers({
+	wallPostsReducer
 });
 
 export default rootReducer;

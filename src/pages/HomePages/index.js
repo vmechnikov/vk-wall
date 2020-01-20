@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchWallPosts } from '../../data/actions';
 
 class HomePage extends React.Component {
 	render() {
@@ -10,4 +12,16 @@ class HomePage extends React.Component {
 	}
 }
 
-export default HomePage;
+const mapStateToProps = ({ wallPostsReducer }) => {
+	return {
+		wallPosts: wallPostsReducer.posts
+	}
+};
+
+const mapDispatchToProps = dispatch => {
+	return {
+		getWallPosts: () => dispatch(fetchWallPosts())
+	}
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
