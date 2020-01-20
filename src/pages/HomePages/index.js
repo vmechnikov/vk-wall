@@ -1,27 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { fetchWallPosts } from '../../data/actions';
+import PostsList from '../../components/PostsList';
 
 class HomePage extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>HomePage</h2>
+				<PostsList />
 			</div>
 		);
 	}
 }
 
-const mapStateToProps = ({ wallPostsReducer }) => {
-	return {
-		wallPosts: wallPostsReducer.posts
-	}
-};
-
-const mapDispatchToProps = dispatch => {
-	return {
-		getWallPosts: () => dispatch(fetchWallPosts())
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default HomePage;

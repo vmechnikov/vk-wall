@@ -1,0 +1,18 @@
+.post {
+  //border: 2px solid #4681ab;
+  background-color: #abcee0;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.post__text {
+  margin-top: 15px;
+}
+
+.post__image {
+  max-width: 100%;
+  margin: 3px auto;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .4);
+  border-radius: 5px;
+}
